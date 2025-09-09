@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: product-service
+      changes:
+        - createTable:
+            tableName: product_product_configuration
+            columns:
+              - column:
+                  name: product_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: product_configuration_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+        - addPrimaryKey:
+            tableName: product_product_configuration
+            columnNames: product_id, product_configuration_id
+        - addForeignKeyConstraint:
+            baseTableName: product_product_configuration
+            baseColumnNames: product_id
+            referencedTableName: products
+            referencedColumnNames: id
+            constraintName: fk_product_product_configuration_product
+            onDelete: CASCADE
+        - addForeignKeyConstraint:
+            baseTableName: product_product_configuration
+            baseColumnNames: product_configuration_id
+            referencedTableName: product_configurations
+            referencedColumnNames: id
+            constraintName: fk_product_product_configuration_configuration
+            onDelete: CASCADE

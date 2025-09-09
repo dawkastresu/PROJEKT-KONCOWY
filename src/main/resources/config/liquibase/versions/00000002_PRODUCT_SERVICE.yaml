@@ -1,0 +1,54 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: product-service
+      changes:
+        - createTable:
+            tableName: product_configurations
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: price
+                  type: DECIMAL(10,2)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: type
+                  type: VARCHAR(50)
+              - column:
+                  name: quantity
+                  type: BIGINT
+              - column:
+                  name: description
+                  type: VARCHAR(1000)
+              - column:
+                  name: image_url
+                  type: VARCHAR(255)
+              - column:
+                  name: specifications
+                  type: TEXT
+              - column:
+                  name: created_at
+                  type: TIMESTAMP
+                  defaultValueComputed: CURRENT_TIMESTAMP
+  - changeSet:
+      id: 4
+      author: product-service
+      changes:
+        - addColumn:
+            tableName: product_configurations
+            columns:
+              - column:
+                  name: image_url
+                  type: VARCHAR(255)

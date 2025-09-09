@@ -1,0 +1,210 @@
+databaseChangeLog:
+  - changeSet:
+      id: 11
+      author: product-service
+      changes:
+        # --------- ProductConfigurations ----------
+        - insert:
+            tableName: product_configurations
+            columns:
+              - column: { name: id, valueNumeric: 1 }
+              - column: { name: name, value: "Intel i5" }
+              - column: { name: price, valueNumeric: 1000 }
+              - column: { name: type, value: "PROCESSOR" }
+              - column: { name: quantity, valueNumeric: 0 }
+              - column: { name: description, value: "" }
+              - column: { name: image_url, value: "" }
+              - column: { name: specifications, value: "" }
+        - insert:
+            tableName: product_configurations
+            columns:
+              - column: { name: id, valueNumeric: 2 }
+              - column: { name: name, value: "Intel i7" }
+              - column: { name: price, valueNumeric: 1500 }
+              - column: { name: type, value: "PROCESSOR" }
+              - column: { name: quantity, valueNumeric: 0 }
+              - column: { name: description, value: "" }
+              - column: { name: image_url, value: "" }
+              - column: { name: specifications, value: "" }
+        - insert:
+            tableName: product_configurations
+            columns:
+              - column: { name: id, valueNumeric: 3 }
+              - column: { name: name, value: "8GB RAM" }
+              - column: { name: price, valueNumeric: 300 }
+              - column: { name: type, value: "RAM" }
+              - column: { name: quantity, valueNumeric: 0 }
+              - column: { name: description, value: "" }
+              - column: { name: image_url, value: "" }
+              - column: { name: specifications, value: "" }
+        - insert:
+            tableName: product_configurations
+            columns:
+              - column: { name: id, valueNumeric: 4 }
+              - column: { name: name, value: "16GB RAM" }
+              - column: { name: price, valueNumeric: 500 }
+              - column: { name: type, value: "RAM" }
+              - column: { name: quantity, valueNumeric: 0 }
+              - column: { name: description, value: "" }
+              - column: { name: image_url, value: "" }
+              - column: { name: specifications, value: "" }
+        - insert:
+            tableName: product_configurations
+            columns:
+              - column: { name: id, valueNumeric: 5 }
+              - column: { name: name, value: "128GB Black" }
+              - column: { name: price, valueNumeric: 200 }
+              - column: { name: type, value: "STORAGE" }
+              - column: { name: quantity, valueNumeric: 0 }
+              - column: { name: description, value: "" }
+              - column: { name: image_url, value: "" }
+              - column: { name: specifications, value: "" }
+        - insert:
+            tableName: product_configurations
+            columns:
+              - column: { name: id, valueNumeric: 6 }
+              - column: { name: name, value: "256GB Silver" }
+              - column: { name: price, valueNumeric: 400 }
+              - column: { name: type, value: "STORAGE" }
+              - column: { name: quantity, valueNumeric: 0 }
+              - column: { name: description, value: "" }
+              - column: { name: image_url, value: "" }
+              - column: { name: specifications, value: "" }
+        - insert:
+            tableName: product_configurations
+            columns:
+              - column: { name: id, valueNumeric: 7 }
+              - column: { name: name, value: "Red Color" }
+              - column: { name: price, valueNumeric: 100 }
+              - column: { name: type, value: "COLOR" }
+              - column: { name: quantity, valueNumeric: 0 }
+              - column: { name: description, value: "" }
+              - column: { name: image_url, value: "" }
+              - column: { name: specifications, value: "" }
+        - insert:
+            tableName: product_configurations
+            columns:
+              - column: { name: id, valueNumeric: 8 }
+              - column: { name: name, value: "Blue Color" }
+              - column: { name: price, valueNumeric: 100 }
+              - column: { name: type, value: "COLOR" }
+              - column: { name: quantity, valueNumeric: 0 }
+              - column: { name: description, value: "" }
+              - column: { name: image_url, value: "" }
+              - column: { name: specifications, value: "" }
+        - insert:
+            tableName: product_configurations
+            columns:
+              - column: { name: id, valueNumeric: 9 }
+              - column: { name: name, value: "Battery 3000mAh" }
+              - column: { name: price, valueNumeric: 50 }
+              - column: { name: type, value: "BATTERY" }
+              - column: { name: quantity, valueNumeric: 0 }
+              - column: { name: description, value: "" }
+              - column: { name: image_url, value: "" }
+              - column: { name: specifications, value: "" }
+        - insert:
+            tableName: product_configurations
+            columns:
+              - column: { name: id, valueNumeric: 10 }
+              - column: { name: name, value: "Battery 4000mAh" }
+              - column: { name: price, valueNumeric: 80 }
+              - column: { name: type, value: "BATTERY" }
+              - column: { name: quantity, valueNumeric: 0 }
+              - column: { name: description, value: "" }
+              - column: { name: image_url, value: "" }
+              - column: { name: specifications, value: "" }
+
+        # --------- Products ----------
+        - insert:
+            tableName: products
+            columns:
+              - column: { name: id, valueNumeric: 1 }
+              - column: { name: name, value: "Laptop Basic" }
+              - column: { name: price, valueNumeric: 2000 }
+              - column: { name: type, value: "COMPUTER" }
+              - column: { name: quantity, valueNumeric: 10 }
+              - column: { name: description, value: "" }
+              - column: { name: image_url, value: "" }
+        - insert:
+            tableName: products
+            columns:
+              - column: { name: id, valueNumeric: 2 }
+              - column: { name: name, value: "Laptop Pro" }
+              - column: { name: price, valueNumeric: 3500 }
+              - column: { name: type, value: "COMPUTER" }
+              - column: { name: quantity, valueNumeric: 5 }
+              - column: { name: description, value: "" }
+              - column: { name: image_url, value: "" }
+        - insert:
+            tableName: products
+            columns:
+              - column: { name: id, valueNumeric: 3 }
+              - column: { name: name, value: "Smartphone X" }
+              - column: { name: price, valueNumeric: 1200 }
+              - column: { name: type, value: "SMARTPHONE" }
+              - column: { name: quantity, valueNumeric: 15 }
+              - column: { name: description, value: "" }
+              - column: { name: image_url, value: "" }
+        - insert:
+            tableName: products
+            columns:
+              - column: { name: id, valueNumeric: 4 }
+              - column: { name: name, value: "Smartwatch" }
+              - column: { name: price, valueNumeric: 800 }
+              - column: { name: type, value: "ELECTRONICS" }
+              - column: { name: quantity, valueNumeric: 20 }
+              - column: { name: description, value: "" }
+              - column: { name: image_url, value: "" }
+
+        # --------- Relacje Product -> Configuration ----------
+        - insert:
+            tableName: product_product_configuration
+            columns:
+              - column: { name: product_id, valueNumeric: 1 }
+              - column: { name: product_configuration_id, valueNumeric: 1 }
+        - insert:
+            tableName: product_product_configuration
+            columns:
+              - column: { name: product_id, valueNumeric: 1 }
+              - column: { name: product_configuration_id, valueNumeric: 3 }
+        - insert:
+            tableName: product_product_configuration
+            columns:
+              - column: { name: product_id, valueNumeric: 1 }
+              - column: { name: product_configuration_id, valueNumeric: 5 }
+        - insert:
+            tableName: product_product_configuration
+            columns:
+              - column: { name: product_id, valueNumeric: 2 }
+              - column: { name: product_configuration_id, valueNumeric: 2 }
+        - insert:
+            tableName: product_product_configuration
+            columns:
+              - column: { name: product_id, valueNumeric: 2 }
+              - column: { name: product_configuration_id, valueNumeric: 4 }
+        - insert:
+            tableName: product_product_configuration
+            columns:
+              - column: { name: product_id, valueNumeric: 2 }
+              - column: { name: product_configuration_id, valueNumeric: 6 }
+        - insert:
+            tableName: product_product_configuration
+            columns:
+              - column: { name: product_id, valueNumeric: 3 }
+              - column: { name: product_configuration_id, valueNumeric: 7 }
+        - insert:
+            tableName: product_product_configuration
+            columns:
+              - column: { name: product_id, valueNumeric: 3 }
+              - column: { name: product_configuration_id, valueNumeric: 8 }
+        - insert:
+            tableName: product_product_configuration
+            columns:
+              - column: { name: product_id, valueNumeric: 3 }
+              - column: { name: product_configuration_id, valueNumeric: 9 }
+        - insert:
+            tableName: product_product_configuration
+            columns:
+              - column: { name: product_id, valueNumeric: 3 }
+              - column: { name: product_configuration_id, valueNumeric: 10 }

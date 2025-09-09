@@ -1,0 +1,35 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: product-db
+    restart: always
+    environment:
+      POSTGRES_DB: product_db
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  product-service:
+    image: product-service-img
+    container_name: product-service
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - postgres
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: product_db
+      DB_USER: user
+      DB_PASSWORD: password
+    ports:
+      - "8081:8081"
+
+volumes:
+  postgres_data:

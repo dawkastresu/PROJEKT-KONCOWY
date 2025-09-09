@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - changeSet:
+      id: 12
+      author: product-service
+      changes:
+        - sql:
+            sql: SELECT setval('products_id_seq', (SELECT MAX(id) FROM products));
