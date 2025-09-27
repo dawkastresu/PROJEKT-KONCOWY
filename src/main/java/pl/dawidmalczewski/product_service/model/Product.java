@@ -39,6 +39,8 @@ public class Product {
 
     private String description;
 
+    private String specifications;
+
     @Column(name = "image_url")
     private String imageUrl;
 
