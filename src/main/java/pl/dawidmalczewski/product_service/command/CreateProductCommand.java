@@ -28,6 +28,9 @@ public class CreateProductCommand {
     @Size(max = 1000, message = "Description cannot exceed 1000 characters")
     private final String description;
 
+    @Size(max = 1000, message = "Specification cannot exceed 1000 characters")
+    private final String specification;
+
     @Size(max = 500, message = "Image URL cannot exceed 500 characters")
     @Pattern(regexp = "^https?://.*\\.(jpg|jpeg|png|gif|webp)$",
             message = "Image URL must be a valid HTTP/HTTPS URL ending with jpg, jpeg, png, gif, or webp",

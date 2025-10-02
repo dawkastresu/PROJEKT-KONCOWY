@@ -51,7 +51,6 @@ public class Product {
             joinColumns = @JoinColumn(name = "product_id"),
             inverseJoinColumns = @JoinColumn(name = "product_configuration_id")
     )
-
     private Set<ProductConfiguration> availableConfigurations = new HashSet<>();
 
     @CreationTimestamp
@@ -66,6 +65,7 @@ public class Product {
         if (command.getType() != null) this.setType(command.getType());
         if (command.getQuantity() != null) this.setQuantity(command.getQuantity());
         if (command.getDescription() != null) this.setDescription(command.getDescription());
+        if (command.getSpecification() != null) this.setDescription(command.getSpecification());
         if (command.getImageUrl() != null) this.setImageUrl(command.getImageUrl());
         if (configs != null) this.setAvailableConfigurations(configs);
     }
