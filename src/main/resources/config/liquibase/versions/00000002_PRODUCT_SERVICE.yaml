@@ -42,13 +42,13 @@ databaseChangeLog:
                   name: created_at
                   type: TIMESTAMP
                   defaultValueComputed: CURRENT_TIMESTAMP
-  - changeSet:
-      id: 4
-      author: product-service
-      changes:
-        - addColumn:
-            tableName: product_configurations
-            columns:
-              - column:
-                  name: image_url
-                  type: VARCHAR(255)
+#  - changeSet:
+#      id: 4
+#      author: product-service
+#      changes:
+#        - addColumn:
+#            tableName: product_configurations
+#            columns:
+#              - column:
+#                  name: image_url
+#                  type: VARCHAR(255)

@@ -53,6 +53,7 @@ public class ProductConfiguration {
         if (command.getType() != null) this.setType(command.getType());
         if (command.getQuantity() != null) this.setQuantity(command.getQuantity());
         if (command.getDescription() != null) this.setDescription(command.getDescription());
+        if (command.getSpecification() != null) this.setSpecifications(command.getSpecification());
         if (command.getImageUrl() != null) this.setImageUrl(command.getImageUrl());
     }
 

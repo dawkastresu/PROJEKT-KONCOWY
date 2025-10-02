@@ -3,10 +3,9 @@ version: '3.9'
 services:
   postgres:
     image: postgres:15
-    container_name: product-db
+    container_name: ecommerce-db
     restart: always
     environment:
-      POSTGRES_DB: product_db
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
     ports:
@@ -18,7 +17,7 @@ services:
     image: product-service-img
     container_name: product-service
     build:
-      context: .
+      context: ./product-service
       dockerfile: Dockerfile
     depends_on:
       - postgres
@@ -30,6 +29,23 @@ services:
       DB_PASSWORD: password
     ports:
       - "8081:8081"
+
+  cart-service:
+    image: cart-service-img
+    container_name: cart-service
+    build:
+      context: ./cart-service
+      dockerfile: Dockerfile
+    depends_on:
+      - postgres
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: cart_db
+      DB_USER: user
+      DB_PASSWORD: password
+    ports:
+      - "8082:8082"
 
 volumes:
   postgres_data:

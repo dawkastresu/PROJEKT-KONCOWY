@@ -18,6 +18,7 @@ public class ProductDto {
     private final ProductType type;
     private final Long quantity;
     private final String description;
+    private final String specifications;
     private final String imageUrl;
     private final Set<ProductConfigurationDto> availableConfigurations;
     private final LocalDateTime createdAt;
